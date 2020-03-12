@@ -1,3 +1,6 @@
+import { FormsModule } from '@angular/forms';
+import { BookAddPage } from './book-add/book-add.page';
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
@@ -10,9 +13,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 @NgModule({
-  declarations: [AppComponent],
-  entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
+  declarations: [AppComponent, BookAddPage],
+  entryComponents: [BookAddPage],
+  imports: [BrowserModule, IonicModule.forRoot(), 
+    AppRoutingModule, HttpClientModule,
+    FormsModule],
   providers: [
     StatusBar,
     SplashScreen,

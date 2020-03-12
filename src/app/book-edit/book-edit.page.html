@@ -1,0 +1,25 @@
+<!-- //src/app/book-edit/book-edit.page.html -->
+<ion-header>
+  <ion-toolbar>
+  <ion-buttons slot="start">
+  <ion-back-button defaultHref="/tabs/tab1" color="tertiary"> </ion-back-button>
+  </ion-buttons>
+  <ion-title>Edit Games</ion-title>
+  </ion-toolbar>
+ </ion-header>
+ <ion-content class="ion-padding" color="light">
+  <ion-item>
+  <ion-label position="stacked">Title</ion-label>
+  <ion-input [(ngModel)]="book.title" value="" placeholder="Enter title"></ion-input>
+  </ion-item>
+  <ion-item>
+  <ion-label position="stacked">Description</ion-label>
+  <ion-textarea [(ngModel)]="book.description" placeholder="Enter description
+ "></ion-textarea>
+  </ion-item>
+  <ion-item>
+  <ion-label position="stacked">Images</ion-label>
+  <ion-input [(ngModel)]="book.images" placeholder="Enter images"></ion-input>
+  </ion-item>
+  <ion-button expand="block" (click)="update()" color="tertiary">SUBMIT</ion-button>
+ </ion-content>

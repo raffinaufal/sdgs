@@ -1,0 +1,26 @@
+<!-- //src/app/book-detail/book-detail.page.html -->
+<ion-header>
+  <ion-toolbar>
+  <ion-buttons slot="start">
+  <ion-back-button defaultHref="/tabs/tab1" color="tertiary"> </ion-back-button>
+  </ion-buttons>
+  <ion-title>Game Description</ion-title>
+  <ion-buttons slot="end">
+  <ion-button (click)="goEdit()" color="tertiary">
+  <ion-icon name="create"> </ion-icon>
+  </ion-button>
+  </ion-buttons>
+</ion-toolbar>
+</ion-header>
+<ion-content color="light">
+ <ion-card color="dark">
+ <ion-card-header>
+ <ion-card-title> {{book.title | uppercase}}</ion-card-title>
+ </ion-card-header>
+ <ion-card-content>
+ <img src="{{book.images}}" onError="this.src='/assets/placeholder.jpg'">
+ <p>Description: {{book.description}}</p>
+ <p>{{book.created_at | date}}</p>
+ </ion-card-content>
+ </ion-card>
+</ion-content>

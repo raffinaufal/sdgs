@@ -1,5 +1,7 @@
 {
   "name": "Raffinaufal",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
